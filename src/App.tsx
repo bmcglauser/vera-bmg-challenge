@@ -1,19 +1,45 @@
-import React, { FunctionComponent } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import './App.scss';
 
-const App: FunctionComponent = () => {
+interface IFormData {
+  email: string;
+  firstName: string;
+  zipCode: string;
+}
+
+const initialFormData = {
+  email: '',
+  firstName: '',
+  zipCode: ''
+}
+
+function App () {
+  const [formData, setFormData] = useState<IFormData>(initialFormData);
+  
+
+  function textChangeHandler (e: ChangeEvent<HTMLInputElement>) {
+    e.preventDefault();
+    setFormData(data => {
+      return {
+        ...data,
+        [e.target.name]: e.target.value
+      }
+    })
+  }
+
   return (
     <div className="app-wrapper">
-      <h1>Sectra</h1>
-      <h1 className="ital">Sectra Italic</h1>
-      <h1 className="light">Sectra Light</h1>
-      <h1 className="ital light">Sectra Light Italic</h1>
-      <p>Walsheim</p>
-      <p className="ital">Walsheim Italic</p>
-      <p className="light">Walsheim Light</p>
-      <p className="ital light">Walsheim Light Italic</p>
-      <p className="bold">Walsheim Bold</p>
-      <p className="ital bold">Walsheim Bold Italic</p>
+      <form>
+        <label htmlFor="email" >Your email address: 
+          <input onChange={textChangeHandler} value={formData.email} id="email" name="email" type="text"/>
+        </label>
+        <label htmlFor="firstName" >Your first name: 
+          <input onChange={textChangeHandler} value={formData.firstName} id="firstName" name="firstName" type="text"/>
+        </label>
+        <label htmlFor="zipCode" >Your zip code: 
+          <input onChange={textChangeHandler} value={formData.zipCode} id="zipCode" name="zipCode" type="text"/>
+        </label>
+      </form>
     </div>
   );
 }

@@ -11,8 +11,8 @@ $blue: #005EB8;
 $deepgreen: #007A69; 
 $brightgreen: #B0CC1B;
 
-@import './fonts/Sectra/sectra-imports.scss';
-@import './fonts/Walsheim/walsheim-imports.scss';
+@import './assets/fonts/Sectra/sectra-imports.scss';
+@import './assets/fonts/Walsheim/walsheim-imports.scss';
 
 * {
   margin: 0;
@@ -21,17 +21,18 @@ $brightgreen: #B0CC1B;
   font-family: 'Walsheim', Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.ital {
-  font-style: italic;
-}
-
-.light {
-  font-weight: lighter;
-}
-
-.bold {
-  font-weight: bold;
-}
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Sectra', Georgia, 'Times New Roman', Times, serif;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 40vw;
+
+  input {
+    margin-left: .2rem;
+    width: 20rem;
+  }
 }
