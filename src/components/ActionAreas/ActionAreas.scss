@@ -1,0 +1,23 @@
+@import '../../App.scss';
+
+
+.areas-wrapper {
+  text-align: right;
+  width: 30%;
+  max-width: 275px;
+  border-left: 2px solid $red;
+  h3 {
+    font-size: 1.5rem;
+  }
+  .action-area-wrapper {
+    display: flex;
+    margin: .5rem;
+    img {
+      margin: .5rem;
+    }
+    p {
+      width: 100%;
+      align-self: center;
+    }
+  }
+}

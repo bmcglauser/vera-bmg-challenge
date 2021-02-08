@@ -20,19 +20,10 @@ $brightgreen: #B0CC1B;
   box-sizing: border-box;
   font-family: 'Walsheim', Verdana, Geneva, Tahoma, sans-serif;
 }
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Sectra', Georgia, 'Times New Roman', Times, serif;
+body {
+  background-color: $lightgray1;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  width: 40vw;
-
-  input {
-    margin-left: .2rem;
-    width: 20rem;
-  }
+h1 {
+  font-family: 'Sectra', Georgia, 'Times New Roman', Times, serif;
 }

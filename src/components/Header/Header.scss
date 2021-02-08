@@ -1,0 +1,45 @@
+@import '../../App.scss';
+
+.header-wrapper {
+  height: 8vh;
+  background-color: $darkgray2;
+  display: flex;
+  color: $red;
+  overflow: hidden;
+
+  .logo-link {
+    
+    img {
+      height: 4vh;
+      min-height: 30px;
+      margin: 2vh;
+    }
+  }
+  ul {
+    height: 100%;
+    width: 50%;
+    margin-left: 2rem;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    list-style-type: none;
+    li {
+      padding: .5rem 1.5rem;
+      transition-duration: .2s;
+      font-weight: bold;
+      a {
+        text-decoration: none;
+        color: $lightgray1;
+      }
+      &.donate {
+        border: 1px solid $lightgray1;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $red;
+          border-color: $red;
+        }
+      }
+    }
+  }
+}

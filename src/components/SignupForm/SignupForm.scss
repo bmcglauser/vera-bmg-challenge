@@ -1,0 +1,16 @@
+@import '../../App.scss';
+
+.signup-form-wrapper {
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 40vw;
+    
+    input {
+      margin-left: .2rem;
+      width: 20rem;
+    }
+  }
+}

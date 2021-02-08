@@ -1,47 +1,48 @@
-import React, { ChangeEvent, useState } from 'react';
+import React from 'react';
 import './App.scss';
+import ActionAreas from './components/ActionAreas';
+import Header from './components/Header';
+import SignupForm from './components/SignupForm';
 
-interface IFormData {
-  email: string;
-  firstName: string;
-  zipCode: string;
-}
-
-const initialFormData = {
-  email: '',
-  firstName: '',
-  zipCode: ''
-}
+const sampleActionAreas = ['community', 'courts', 'victims'];
 
 function App () {
-  const [formData, setFormData] = useState<IFormData>(initialFormData);
-  
-
-  function textChangeHandler (e: ChangeEvent<HTMLInputElement>) {
-    e.preventDefault();
-    setFormData(data => {
-      return {
-        ...data,
-        [e.target.name]: e.target.value
-      }
-    })
-  }
-
   return (
     <div className="app-wrapper">
-      <form>
-        <label htmlFor="email" >Your email address: 
-          <input onChange={textChangeHandler} value={formData.email} id="email" name="email" type="text"/>
-        </label>
-        <label htmlFor="firstName" >Your first name: 
-          <input onChange={textChangeHandler} value={formData.firstName} id="firstName" name="firstName" type="text"/>
-        </label>
-        <label htmlFor="zipCode" >Your zip code: 
-          <input onChange={textChangeHandler} value={formData.zipCode} id="zipCode" name="zipCode" type="text"/>
-        </label>
-      </form>
+      <Header />
+      <section className="feature-wrapper">
+        <p>"...to be free is not merely to cast off one's chains, but to live in a way that respects and enhances the freedom of others"</p>
+        <p>Nelson Mandela, Long Walk to Freedom</p>
+      </section>
+      <section>
+        <article className="poll-data">
+          <p className="eve-poll-intro">The American Election Eve Poll is conducted to give greater insight into Americans' deeper throughts, with a focus on Americans of Color</p>
+          <p className="recent-poll">In the poll directly preceding November's election, <span className="stressed-text">Black Americans spoke clearly:</span></p>
+          <div>
+            <div className="stats-wrapper">
+              <p>
+                <span className="percent-highlight">93%</span> support more direct accountability for law enforcement officials who abuse and kill Black Americans
+              </p>
+              <p>
+                <span className="percent-highlight">70%</span> support reducing funding for law enforcement and investing more in social services and programs proven to reduce violence
+              </p>
+            </div>
+          </div>
+        </article>
+        <ActionAreas areas={sampleActionAreas} />
+      </section>
+      <p className="join-us">
+        <em>Join us in fulfilling the wishes of Black communities</em> across America. Vera strives to effect meaningful justice for Americans still agressed by government workers hired to serve and protect.
+      </p>
+      <SignupForm />
+      <p className="annual-report">
+        Click <a href="https://www.vera.org/annual-report-2020-reckoning-with-justice/">here</a> to read our Annual Report for 2020, prefaced with powerful statements from President and Director Nicholas Turner, and Board Chair Damien Dwin.
+      </p>
+      <section className="footer-wrapper">
+        
+      </section>
     </div>
-  );
+  )
 }
 
 export default App;
