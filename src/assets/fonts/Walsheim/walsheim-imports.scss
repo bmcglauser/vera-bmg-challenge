@@ -1,0 +1,52 @@
+@font-face {
+  font-family: 'Walsheim';
+    src: url('WalsheimRegular/GT-Walsheim-Regular.eot'); /* IE9 */
+    src: url('WalsheimRegular/GT-Walsheim-Regular.woff') format('woff'), /* Most Modern Browsers */
+         url('WalsheimRegular/GT-Walsheim-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+  font-family: 'Walsheim';
+    src: url('WalsheimRegularOblique/GT-Walsheim-Regular-Oblique.eot');
+    src: url('WalsheimRegularOblique/GT-Walsheim-Regular-Oblique.woff') format('woff'), 
+        url('WalsheimRegularOblique/GT-Walsheim-Regular-Oblique.ttf')  format('truetype'); 
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+  font-family: 'Walsheim';
+    src: url('WalsheimThin/GT-Walsheim-Thin.eot');
+    src: url('WalsheimThin/GT-Walsheim-Thin.woff') format('woff'),
+        url('WalsheimThin/GT-Walsheim-Thin.ttf')  format('truetype'); 
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Walsheim';
+    src: url('WalsheimThinOblique/GT-Walsheim-Thin-Oblique.eot');
+    src: url('WalsheimThinOblique/GT-Walsheim-Thin-Oblique.woff') format('woff'), 
+        url('WalsheimThinOblique/GT-Walsheim-Thin-Oblique.ttf')  format('truetype'); 
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+  font-family: 'Walsheim';
+    src: url('WalsheimBold/GT-Walsheim-Bold.eot');
+    src: url('WalsheimBold/GT-Walsheim-Bold.woff') format('woff'),
+        url('WalsheimBold/GT-Walsheim-Bold.ttf')  format('truetype'); 
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Walsheim';
+    src: url('WalsheimBoldOblique/GT-Walsheim-Bold-Oblique.eot');
+    src: url('WalsheimBoldOblique/GT-Walsheim-Bold-Oblique.woff') format('woff'), 
+        url('WalsheimBoldOblique/GT-Walsheim-Bold-Oblique.ttf')  format('truetype'); 
+    font-weight: 700;
+    font-style: italic;
+}

@@ -1,24 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { FunctionComponent } from 'react';
+import './App.scss';
 
-function App() {
+const App: FunctionComponent = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-wrapper">
+      <h1>Sectra</h1>
+      <h1 className="ital">Sectra Italic</h1>
+      <h1 className="light">Sectra Light</h1>
+      <h1 className="ital light">Sectra Light Italic</h1>
+      <p>Walsheim</p>
+      <p className="ital">Walsheim Italic</p>
+      <p className="light">Walsheim Light</p>
+      <p className="ital light">Walsheim Light Italic</p>
+      <p className="bold">Walsheim Bold</p>
+      <p className="ital bold">Walsheim Bold Italic</p>
     </div>
   );
 }

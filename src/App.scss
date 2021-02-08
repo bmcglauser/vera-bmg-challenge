@@ -1,0 +1,37 @@
+// Primary palette
+$red: #EF4136;
+$lightgray1: #DAD9D5;
+$lightgray2: #BCBDBC;
+$darkgray1: #4D4E56;
+$darkgray2: #231F20;
+
+// Secondary palette
+$orange: #FF7200;
+$blue: #005EB8;
+$deepgreen: #007A69; 
+$brightgreen: #B0CC1B;
+
+@import './fonts/Sectra/sectra-imports.scss';
+@import './fonts/Walsheim/walsheim-imports.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Walsheim', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.ital {
+  font-style: italic;
+}
+
+.light {
+  font-weight: lighter;
+}
+
+.bold {
+  font-weight: bold;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Sectra', Georgia, 'Times New Roman', Times, serif;
+}
