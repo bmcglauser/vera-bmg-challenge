@@ -1,16 +1,68 @@
 @import '../../App.scss';
 
 .signup-form-wrapper {
-
+  background-color: $darkgray2;
+  color: $lightgray1;
+  width: 80%;
+  min-width: 700px;
+  height: 17rem;
+  margin-left: 10%;
+  padding: 1rem;
+  > p {
+    width: 90%;
+    margin-left: 5%;
+    color: $red;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
   form {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    width: 40vw;
     
-    input {
-      margin-left: .2rem;
+    .inputs-wrapper {
+      align-self: center;
+      display: flex;
+      justify-content: center;
+      width: 70%;
+      label {
+        text-align: center;
+        margin: .5rem 0;
+      }
+      
+      input {
+        margin: .2rem 0 0 .2rem;
+        width: 20rem;
+        padding: .5rem;
+        margin-bottom: 1.5rem;
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+    button {
+      background-color: $red;
+      height: 2.5rem;
+      color: $lightgray1;
+      font-weight: bold;
+      font-size: 1.5rem;
+      padding: .5rem;
       width: 20rem;
+      align-self: center;
+      border: none;
+      transition-duration: .2s;
+      > p {
+        transform: translateY(-5px);
+      }
+      &:focus {
+        outline: none;
+        background-color: adjust-color($color: $red, $lightness: 5%);
+      }
+      &:active {
+        background-color: adjust-color($color: $red, $lightness: -5%);
+      }
+      &:hover {
+        transform: scale(1.2);
+      }
     }
   }
 }

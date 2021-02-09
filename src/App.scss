@@ -1,29 +1,108 @@
-// Primary palette
-$red: #EF4136;
-$lightgray1: #DAD9D5;
-$lightgray2: #BCBDBC;
-$darkgray1: #4D4E56;
-$darkgray2: #231F20;
+@import './index.scss';
 
-// Secondary palette
-$orange: #FF7200;
-$blue: #005EB8;
-$deepgreen: #007A69; 
-$brightgreen: #B0CC1B;
+.app-wrapper {
+  .primary-content {
+    height: 86vh;
+    overflow-y: auto;
+    .feature-wrapper {
+      background-image: url(./assets/backdrops/mandelaFrame.png);
+      background-size: cover;
+      height: 40vh;
+      margin-bottom: 1rem;
+      .text-wrapper {
+        background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba($darkgray2, .8));
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+        .quote {
+          font-family: 'Sectra', Georgia, 'Times New Roman', Times, serif;
+          font-weight: lighter;
+          text-align: right;
+          margin-left: 33%;
+          width: 65%;
+          color: $lightgray1;
+          &.content {
+            font-size: 2rem;
+          }
+          &.author {
+            font-style: italic;
+          }
+        }
+        .photo-credit {
+          color: $lightgray1;
+          font-size: .5rem;
+          margin: .2rem .3rem;
+        }
+      }
+    }
+    .center-block {
+      display: flex;
+      .poll-data {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .eve-poll-intro {
+          font-weight: bold;
+          font-size: 1.2rem;
+          color: $red;
+          width: 45%;
+          align-self: flex-start;
+          margin: 2rem;
+        }
+        .recent-poll {
+          text-align: center;
+          .stressed-text {
+            font-style: italic;
+            font-size: 1.6rem;
+          }
+        }
+        .stats-wrapper {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          width: 70%;
+          margin-left: 15%;
 
-@import './assets/fonts/Sectra/sectra-imports.scss';
-@import './assets/fonts/Walsheim/walsheim-imports.scss';
+          .stat-block {
+            margin: 2rem;
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            .percent-highlight {
+              color: $red;
+              font-size: 2rem;    
+            }
+          }
+        }
+      }
+    }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Walsheim', Verdana, Geneva, Tahoma, sans-serif;
-}
-body {
-  background-color: $lightgray1;
-}
+    .join-us {
+      text-align: center;
+      font-size: 1.4rem;
+      width: 60%;
+      margin: 1.5rem 0 1.5rem 20%;
+    }
+    .annual-report {
+      font-size: 1.2rem;
+      text-align: right;
+      width: 55%;
+      margin: 2rem 0 2rem 40%;
+      a {
+        color: $red;
+        font-weight: bold;
+      }
+    }
+  }
 
-h1 {
-  font-family: 'Sectra', Georgia, 'Times New Roman', Times, serif;
+  .footer-wrapper {
+    height: 6vh;
+    background-color: $darkgray1;
+    display: flex;
+    justify-content: flex-end;
+    img {
+      height: 4vh;
+      margin: 1vh;
+    }
+  }
 }

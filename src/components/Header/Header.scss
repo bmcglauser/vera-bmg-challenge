@@ -25,12 +25,20 @@
     list-style-type: none;
     li {
       padding: .5rem 1.5rem;
-      transition-duration: .2s;
       font-weight: bold;
+      transition-duration: .2s;
+
       a {
+        transition-duration: .2s;
         text-decoration: none;
-        color: $lightgray1;
+        color: $lightgray1;        
       }
+      &:hover {
+        a {
+          color: $red;
+        }
+      }
+
       &.donate {
         border: 1px solid $lightgray1;
 
@@ -38,6 +46,9 @@
           cursor: pointer;
           background-color: $red;
           border-color: $red;
+          a {
+            color: $lightgray1;
+          }
         }
       }
     }
