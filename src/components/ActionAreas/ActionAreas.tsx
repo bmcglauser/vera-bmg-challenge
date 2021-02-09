@@ -1,13 +1,15 @@
 import React, { FunctionComponent } from 'react';
 import './ActionAreas.scss';
-import {getActionIcon, getActionDescription} from '../../utils/getActionAreaInfo';
+import {
+  getActionIcon,
+  getActionDescription
+} from '../../utils/getActionAreaInfo';
 
 interface ActionAreasProps {
   areas: string[];
 }
 
-const ActionAreas: FunctionComponent<ActionAreasProps> = ({areas}) => {
-  
+const ActionAreas: FunctionComponent<ActionAreasProps> = ({ areas }) => {
   const items = areas.map((areaString, i) => {
     const icon = getActionIcon(areas[i]);
     const description = getActionDescription(areas[i]);
@@ -17,16 +19,15 @@ const ActionAreas: FunctionComponent<ActionAreasProps> = ({areas}) => {
         <img src={icon} alt={`${description}`} />
         <p>{description}</p>
       </div>
-      )
-    }
-  );
-  
+    );
+  });
+
   return (
     <div className="areas-wrapper">
       <h3>Action Areas</h3>
       {items}
     </div>
-  )
-}
+  );
+};
 
 export default ActionAreas;

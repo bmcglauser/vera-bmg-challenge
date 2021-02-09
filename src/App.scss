@@ -5,22 +5,22 @@
     height: 86vh;
     overflow-y: auto;
     .feature-wrapper {
-      background-image: url(./assets/backdrops/mandelaFrame.png);
-      background-size: cover;
       height: 40vh;
       margin-bottom: 1rem;
+      background-image: url(./assets/backdrops/mandelaFrame.png);
+      background-size: cover;
       .text-wrapper {
+        height: 100%;
         background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0), rgba($darkgray2, .8));
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
-        height: 100%;
         .quote {
+          width: 65%;
+          margin-left: 33%;
           font-family: 'Sectra', Georgia, 'Times New Roman', Times, serif;
           font-weight: lighter;
           text-align: right;
-          margin-left: 33%;
-          width: 65%;
           color: $lightgray1;
           &.content {
             font-size: 2rem;
@@ -30,9 +30,9 @@
           }
         }
         .photo-credit {
-          color: $lightgray1;
-          font-size: .5rem;
           margin: .2rem .3rem;
+          font-size: .5rem;
+          color: $lightgray1;
         }
       }
     }
@@ -44,53 +44,52 @@
         flex-direction: column;
         align-items: center;
         .eve-poll-intro {
-          font-weight: bold;
-          font-size: 1.2rem;
-          color: $red;
           width: 45%;
-          align-self: flex-start;
           margin: 2rem;
+          align-self: flex-start;
+          font-size: 1.2rem;
+          font-weight: bold;
+          color: $red;
         }
         .recent-poll {
           text-align: center;
           .stressed-text {
-            font-style: italic;
             font-size: 1.6rem;
+            font-style: italic;
           }
         }
         .stats-wrapper {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
           width: 70%;
           margin-left: 15%;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
 
           .stat-block {
             margin: 2rem;
             font-size: 1.2rem;
             line-height: 1.5rem;
             .percent-highlight {
-              color: $red;
               font-size: 2rem;    
+              color: $red;
             }
           }
         }
       }
     }
-
     .join-us {
-      text-align: center;
-      font-size: 1.4rem;
       width: 60%;
       margin: 1.5rem 0 1.5rem 20%;
+      font-size: 1.4rem;
+      text-align: center;
     }
     .annual-report {
-      font-size: 1.2rem;
-      text-align: right;
       width: 55%;
       margin: 2rem 0 2rem 40%;
+      font-size: 1.2rem;
+      text-align: right;
       a {
-        color: $red;
         font-weight: bold;
+        color: $red;
       }
     }
   }
